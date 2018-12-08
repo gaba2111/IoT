@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Mateusz\.android\build-cache\647fa428039fdfdade2e4e2f3c15b00b882ad0c5\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="80d9ff49e99ff481062ea190b43e8d6bdffd4ddc">
+        <dex dex="C:\Users\Mateusz\AndroidStudioProjects\BluetoothLeGatt\Application\build\intermediates\pre-dexed\debug\classes_952af3f835ce3f099906fd8e79aefbc4f23cab7c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Mateusz\.gradle\caches\modules-2\files-2.1\android.arch.core\common\1.0.0\a2d487452376193fc8c103dd2b9bd5f2b1b44563\common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="C:\Users\Mateusz\AndroidStudioProjects\BluetoothLeGatt\Application\build\intermediates\pre-dexed\debug\common-1.0.0_439f8e4bb135cebf36cc440d2d8199c1cf109b10.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Mateusz\.android\build-cache\b5198b81da97d3aaab7a29f6f36cb0bd8ab05e61\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f428e2fbc9ed0b297e3a3f420e51e6982f66822d">
+        <dex dex="C:\Users\Mateusz\AndroidStudioProjects\BluetoothLeGatt\Application\build\intermediates\pre-dexed\debug\classes_ea57a4f5db0befa84cf734a68cf7e8cb6743cedc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Mateusz\.android\build-cache\825838c3c64af63c42006e4adfb78f4b41ac1c55\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
+        <dex dex="C:\Users\Mateusz\AndroidStudioProjects\BluetoothLeGatt\Application\build\intermediates\pre-dexed\debug\classes_d8f20af589e51d9851916ecbcdf088f647ef1e75.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Mateusz\.gradle\caches\modules-2\files-2.1\android.arch.lifecycle\common\1.0.0\e414a4cb28434e25c4f6aa71426eb20cf4874ae9\common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
+        <dex dex="C:\Users\Mateusz\AndroidStudioProjects\BluetoothLeGatt\Application\build\intermediates\pre-dexed\debug\common-1.0.0_dc93275182729edd130cb4868e512dac8ad92893.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Mateusz\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\26.1.0\814258103cf26a15fcc26ecce35f5b7d24b73f8\support-annotations-26.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="0814258103cf26a15fcc26ecce35f5b7d24b73f8">
+        <dex dex="C:\Users\Mateusz\AndroidStudioProjects\BluetoothLeGatt\Application\build\intermediates\pre-dexed\debug\support-annotations-26.1.0_8aa54b3482eec1f96d6ca48910cc25191af8f065.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Mateusz\.android\build-cache\6a5da01ae9c3a7408e6c240751dbab827a8be4a0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
+        <dex dex="C:\Users\Mateusz\AndroidStudioProjects\BluetoothLeGatt\Application\build\intermediates\pre-dexed\debug\classes_72cd7ee635f078554dddbb0c13d75f1ce7820bdf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Mateusz\.android\build-cache\97783ef484e489f7e5c9331b0ecd84ed4066be78\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6f4138a4e065826cb044d49faea4cfd7191773d1">
+        <dex dex="C:\Users\Mateusz\AndroidStudioProjects\BluetoothLeGatt\Application\build\intermediates\pre-dexed\debug\classes_6c7f14148731f61a705b22f386908aab226083e3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Mateusz\.android\build-cache\1fc8bdf22d7eea69d2391c5d7444f2992ec0347a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b4d6fbbb48b42dd03fd9c5a09b3b7a53266df6ed">
+        <dex dex="C:\Users\Mateusz\AndroidStudioProjects\BluetoothLeGatt\Application\build\intermediates\pre-dexed\debug\classes_5eee67ab10ddf4dbb7697c079602da12f020af99.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Mateusz\.android\build-cache\4724ea6b507ad7b17dd528b8927428bc6d352001\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="40392f30a601db5675cdf18192aab013d6fee6ec">
+        <dex dex="C:\Users\Mateusz\AndroidStudioProjects\BluetoothLeGatt\Application\build\intermediates\pre-dexed\debug\classes_5d0bde31a7f008993e6245270252318f3d951600.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Mateusz\AndroidStudioProjects\BluetoothLeGatt\Application\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\Mateusz\AndroidStudioProjects\BluetoothLeGatt\Application\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_ee2c35cca537efe776b4695e1eae8a2108be0218\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Mateusz\.android\build-cache\4dc9f1488b88d54b942ca76aeaf6ed4dcd70c08c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f97cf85b0fe70d37a705111dafa6b1b418ea1650">
+        <dex dex="C:\Users\Mateusz\AndroidStudioProjects\BluetoothLeGatt\Application\build\intermediates\pre-dexed\debug\classes_d011a3af5e5bff4502938b2b23b6a900132f157a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Mateusz\.android\build-cache\23cd49cbce6d74b6cd974c11051e8dcf871996be\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Mateusz\AndroidStudioProjects\BluetoothLeGatt\Application\build\intermediates\pre-dexed\debug\classes_fad1b00d4f04a7fd9994d9a9d7a02a15976d5ceb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Mateusz\.android\build-cache\69de4aa27c1789057c2ef3b744cf4f233aa812fe\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="508f50705b4fde51a16259f29c854201a3044516">
+        <dex dex="C:\Users\Mateusz\AndroidStudioProjects\BluetoothLeGatt\Application\build\intermediates\pre-dexed\debug\classes_96305bcd3cf6471aeea0640ba849ccd91f3e3660.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Mateusz\.android\build-cache\a40685564f04b75e3181029a46219ec6c8a7fe4f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
+        <dex dex="C:\Users\Mateusz\AndroidStudioProjects\BluetoothLeGatt\Application\build\intermediates\pre-dexed\debug\classes_e166f356b549ca6ad9ea271be3cb44e753203650.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Mateusz\.android\build-cache\5c14cdb1744e664d8ac1e99c2ff17cbe678ad079\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
+        <dex dex="C:\Users\Mateusz\AndroidStudioProjects\BluetoothLeGatt\Application\build\intermediates\pre-dexed\debug\classes_343438e06c20f0093e93d5a047555c9c3157f9fe.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Mateusz\AndroidStudioProjects\BluetoothLeGatt\Application\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="aedfe8f64b6f036c3fd1955133fab3e48b43d7ac">
+        <dex dex="C:\Users\Mateusz\AndroidStudioProjects\BluetoothLeGatt\Application\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f477c94c07d9e5d9b7683a00c91e77e1a323db82\classes.dex" />
+    </item>
+
+</items>

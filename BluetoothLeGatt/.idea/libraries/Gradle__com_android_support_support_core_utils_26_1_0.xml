@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.support:support-core-utils-26.1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/3b984d07c47f0e373ac109e3a93fc169efd5091b/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/3b984d07c47f0e373ac109e3a93fc169efd5091b/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
