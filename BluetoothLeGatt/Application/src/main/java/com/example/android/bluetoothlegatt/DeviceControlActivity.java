@@ -54,6 +54,7 @@ public class DeviceControlActivity extends Activity {
     private TextView mConnectionState;
     private TextView mDataField;
     private TextView mDataField1;
+    private TextView mDataField2;
     private String mDeviceName;
     private String mDeviceAddress;
     private ExpandableListView mGattServicesList;
@@ -111,6 +112,7 @@ public class DeviceControlActivity extends Activity {
             } else if (BluetoothLeService.ACTION_DATA_AVAILABLE.equals(action)) {
                 displayData(intent.getStringExtra(BluetoothLeService.EXTRA_DATA));
                 displayData1(intent.getStringExtra(BluetoothLeService.EXTRA_STRIDES));
+                displayData2(intent.getStringExtra(BluetoothLeService.EXTRA_ALKO));
             }
         }
     };
@@ -153,6 +155,7 @@ public class DeviceControlActivity extends Activity {
         mGattServicesList.setAdapter((SimpleExpandableListAdapter) null);
         mDataField.setText(R.string.no_data);
         mDataField1.setText("No data");
+        mDataField2.setText("No data");
     }
 
     @Override
@@ -171,6 +174,7 @@ public class DeviceControlActivity extends Activity {
         mConnectionState = (TextView) findViewById(R.id.connection_state);
         mDataField = (TextView) findViewById(R.id.data_value);
         mDataField1 = (TextView) findViewById(R.id.data_value1);
+        mDataField2 = (TextView) findViewById(R.id.data_value2);
 
         getActionBar().setTitle(mDeviceName);
         getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -248,6 +252,11 @@ public class DeviceControlActivity extends Activity {
     private void displayData1(String data1) {
         if (data1 != null) {
             mDataField1.setText(data1);
+        }
+    }
+    private void displayData2(String data2) {
+        if (data2 != null) {
+            mDataField2.setText(data2);
         }
     }
 

@@ -14,7 +14,8 @@
      limitations under the License.
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp">
@@ -96,6 +97,31 @@
             android:layout_height="wrap_content"
             android:text="@string/no_data"
             android:textSize="22sp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_margin="10dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_footstep"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alkomat:"
+            android:textSize="22sp" />
+        <Space android:layout_width="5dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/data_value2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_data"
+            android:textSize="22sp" />
     </LinearLayout>
     <ExpandableListView android:id="@+id/gatt_services_list"
             android:layout_width="match_parent"

@@ -63,10 +63,12 @@ public class BluetoothLeService extends Service {
     public final static String EXTRA_DATA =
             "com.example.bluetooth.le.EXTRA_DATA";
     public static final String EXTRA_STRIDES = "no.nordicsemi.android.nrftoolbox.rsc.EXTRA_STRIDES";
+    public static final String EXTRA_ALKO = "no.nordicsemi.android.nrftoolbox.rsc.EXTRA_ALKO";
 
     public final static UUID UUID_HEART_RATE_MEASUREMENT =
             UUID.fromString(SampleGattAttributes.HEART_RATE_MEASUREMENT);
     public final static UUID UUID_STEP_COUNTER = UUID.fromString(SampleGattAttributes.STEP_COUNTER);
+    public final static UUID UUID_ALCOHOL_MEASUREMENT = UUID.fromString(SampleGattAttributes.ALCOHOL_MEASUREMENT);
 
     // Implements callback methods for GATT events that the app cares about.  For example,
     // connection change and services discovered.
@@ -151,6 +153,10 @@ public class BluetoothLeService extends Service {
             //intent.putExtra(EXTRA_DATA, new String(data) + "\n" + stringBuilder.toString());
             intent.putExtra(EXTRA_STRIDES, String.valueOf(data));
             // }
+        }
+        else if(UUID_ALCOHOL_MEASUREMENT.equals(characteristic.getUuid())){
+            final int data = characteristic.getIntValue(BluetoothGattCharacteristic.FORMAT_UINT32,0);
+            intent.putExtra(EXTRA_ALKO, String.valueOf(data));
         }
         else {
             // For all other profiles, writes the data formatted in HEX.
@@ -320,6 +326,12 @@ public class BluetoothLeService extends Service {
             BluetoothGattDescriptor descriptor = characteristic.getDescriptor(
                     UUID.fromString(SampleGattAttributes.CLIENT_CHARACTERISTIC_CONFIG));
             descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
+            mBluetoothGatt.writeDescriptor(descriptor);
+        }
+        if(UUID_ALCOHOL_MEASUREMENT.equals(characteristic.getUuid())){
+            BluetoothGattDescriptor descriptor = characteristic.getDescriptor(
+                    UUID.fromString(SampleGattAttributes.CLIENT_CHARACTERISTIC_CONFIG));
+            descriptor.setValue(BluetoothGattDescriptor.DISABLE_NOTIFICATION_VALUE);
             mBluetoothGatt.writeDescriptor(descriptor);
         }
     }
