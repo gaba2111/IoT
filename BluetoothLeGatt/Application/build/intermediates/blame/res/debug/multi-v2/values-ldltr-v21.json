@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\EiT IV\\Semestr VII\\inzynierka\\BluetoothLeGatt\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
+            "outputFile": "C:\\Users\\Gaba\\EiT\\II stopien\\Semestr 2\\IoT\\IoT\\BluetoothLeGatt\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\mateu\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\5285fed1ab0c37b3937af46906e1d34a\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "source": "C:\\Users\\Gaba\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\e67368551aed0e8d4918feebeca407d9\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

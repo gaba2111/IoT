@@ -35,6 +35,10 @@ import android.widget.ExpandableListView;
 import android.widget.SimpleExpandableListAdapter;
 import android.widget.TextView;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -110,9 +114,43 @@ public class DeviceControlActivity extends Activity {
                 // Show all the supported services and characteristics on the user interface.
                 displayGattServices(mBluetoothLeService.getSupportedGattServices());
             } else if (BluetoothLeService.ACTION_DATA_AVAILABLE.equals(action)) {
+
+                final String dana = intent.getStringExtra(BluetoothLeService.EXTRA_STRIDES);
+
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        insert();
+                    }
+
+                    private void insert() {
+
+                        try {
+                            Class.forName("com.mysql.jdbc.Driver");
+                            String url = "jdbc:mysql://alkosmartband-mysql-db.mysql.database.azure.com:3306/new_smartband_db?useSSL=true&requireSSL=false";
+                            String user = "alkoadmin@alkosmartband-mysql-db";
+                            String password = "Alkomat211.";
+                            Connection connection = DriverManager.getConnection(url, user, password);
+                            PreparedStatement statement = connection.prepareStatement("INSERT INTO test2 (first_name,last_name) VALUES (?, ?)");
+                            statement.setString(1, dana);
+                            statement.setString(2, "nazwisko23");
+                            statement.execute();
+//            statement.close();
+//            connection.close();
+
+                        } catch (ClassNotFoundException e) {
+                            e.printStackTrace();
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                }).start();
+
                 displayData(intent.getStringExtra(BluetoothLeService.EXTRA_DATA));
                 displayData1(intent.getStringExtra(BluetoothLeService.EXTRA_STRIDES));
                 displayData2(intent.getStringExtra(BluetoothLeService.EXTRA_ALKO));
+                System.out.print("WYSWIETLANIE");
             }
         }
     };

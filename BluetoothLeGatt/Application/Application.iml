@@ -151,5 +151,6 @@
     <orderEntry type="library" name="Gradle: com.android.support:support-compat-26.1.0" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-v4-26.1.0" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.lifecycle:runtime-1.0.0" level="project" />
+    <orderEntry type="module" module-name="mysql-connector-java-5.1.26-bin" />
   </component>
 </module>

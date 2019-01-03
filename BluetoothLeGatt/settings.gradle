@@ -1,1 +1,1 @@
-include 'Application'
+include 'Application', ':mysql-connector-java-5.1.26-bin'
