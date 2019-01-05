@@ -823,6 +823,7 @@ string error_bluetooth_not_supported
 string intro_message
 string label_data
 string label_data1
+string label_data2
 string label_device_address
 string label_state
 string menu_connect

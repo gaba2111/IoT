@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 3.2.1">
+
+    <issue
+        id="DuplicateIds"
+        severity="Fatal"
+        message="Duplicate id `@+id/data_value`, already defined earlier in this layout"
+        category="Correctness"
+        priority="7"
+        summary="Duplicate ids within a single layout"
+        explanation="Within a layout, id&apos;s should be unique since otherwise `findViewById()` can return an unexpected view."
+        errorLine1="        &lt;TextView android:id=&quot;@+id/data_value&quot;"
+        errorLine2="                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\Gaba\EiT\BluetoothLeGatt\Application\src\main\res\layout\gatt_services_characteristics.xml"
+            line="97"
+            column="19"/>
+        <location
+            file="C:\Users\Gaba\EiT\BluetoothLeGatt\Application\src\main\res\layout\gatt_services_characteristics.xml"
+            line="71"
+            column="19"/>
+    </issue>
+
+</issues>

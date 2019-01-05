@@ -39,7 +39,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -115,12 +117,19 @@ public class DeviceControlActivity extends Activity {
                 displayGattServices(mBluetoothLeService.getSupportedGattServices());
             } else if (BluetoothLeService.ACTION_DATA_AVAILABLE.equals(action)) {
 
-                final String dana = intent.getStringExtra(BluetoothLeService.EXTRA_STRIDES);
+                System.out.print("ZARAZ POLECI INSERT");
+
+                final String dana_kroki = intent.getStringExtra(BluetoothLeService.EXTRA_STRIDES);
+                final String dana_puls = intent.getStringExtra(BluetoothLeService.EXTRA_DATA);
+                final String dana_alko = intent.getStringExtra(BluetoothLeService.EXTRA_ALKO);
+                final Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+//                final Date date = new Date();
 
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
                         insert();
+                        insert2();
                     }
 
                     private void insert() {
@@ -131,12 +140,39 @@ public class DeviceControlActivity extends Activity {
                             String user = "alkoadmin@alkosmartband-mysql-db";
                             String password = "Alkomat211.";
                             Connection connection = DriverManager.getConnection(url, user, password);
-                            PreparedStatement statement = connection.prepareStatement("INSERT INTO test2 (first_name,last_name) VALUES (?, ?)");
-                            statement.setString(1, dana);
-                            statement.setString(2, "nazwisko23");
+                            /* INSERT TO TABELI KROKÓW*/
+                            PreparedStatement statement = connection.prepareStatement("INSERT INTO test_activity (user,timestamp,steps,pulse) VALUES (?, ?, ?, ?)");
+                            statement.setString(1, "2");
+                            statement.setString(2, String.valueOf(timestamp));
+                            statement.setString(3, dana_kroki);
+                            statement.setString(4, "123");
                             statement.execute();
-//            statement.close();
-//            connection.close();
+                            statement.close();
+                            connection.close();
+                        } catch (ClassNotFoundException e) {
+                            e.printStackTrace();
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+
+                    private void insert2() {
+
+                        try {
+                            Class.forName("com.mysql.jdbc.Driver");
+                            String url = "jdbc:mysql://alkosmartband-mysql-db.mysql.database.azure.com:3306/new_smartband_db?useSSL=true&requireSSL=false";
+                            String user = "alkoadmin@alkosmartband-mysql-db";
+                            String password = "Alkomat211.";
+                            Connection connection = DriverManager.getConnection(url, user, password);
+                            /* INSERT TO TABELI ALKOHOL*/
+                            PreparedStatement statement = connection.prepareStatement("INSERT INTO test_drinking (user,timestamp,alcohol) VALUES (?, ?, ?)");
+                            statement.setString(1, "2");
+                            statement.setString(2, String.valueOf(timestamp));
+                            statement.setString(3, dana_alko);
+                            statement.execute();
+                            statement.close();
+                            connection.close();
 
                         } catch (ClassNotFoundException e) {
                             e.printStackTrace();
@@ -150,7 +186,6 @@ public class DeviceControlActivity extends Activity {
                 displayData(intent.getStringExtra(BluetoothLeService.EXTRA_DATA));
                 displayData1(intent.getStringExtra(BluetoothLeService.EXTRA_STRIDES));
                 displayData2(intent.getStringExtra(BluetoothLeService.EXTRA_ALKO));
-                System.out.print("WYSWIETLANIE");
             }
         }
     };
@@ -187,7 +222,7 @@ public class DeviceControlActivity extends Activity {
                     }
                     return false;
                 }
-    };
+            };
 
     private void clearUI() {
         mGattServicesList.setAdapter((SimpleExpandableListAdapter) null);
