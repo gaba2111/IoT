@@ -123,7 +123,7 @@ public class DeviceControlActivity extends Activity {
                 final String dana_puls = intent.getStringExtra(BluetoothLeService.EXTRA_DATA);
                 final String dana_alko = intent.getStringExtra(BluetoothLeService.EXTRA_ALKO);
                 final Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-//                final Date date = new Date();
+                final String user_id = "15";
 
                 new Thread(new Runnable() {
                     @Override
@@ -142,10 +142,10 @@ public class DeviceControlActivity extends Activity {
                             Connection connection = DriverManager.getConnection(url, user, password);
                             /* INSERT TO TABELI KROKÓW*/
                             PreparedStatement statement = connection.prepareStatement("INSERT INTO test_activity (user,timestamp,steps,pulse) VALUES (?, ?, ?, ?)");
-                            statement.setString(1, "2");
+                            statement.setString(1, user_id);
                             statement.setString(2, String.valueOf(timestamp));
                             statement.setString(3, dana_kroki);
-                            statement.setString(4, "123");
+                            statement.setString(4, dana_puls);
                             statement.execute();
                             statement.close();
                             connection.close();
@@ -167,7 +167,7 @@ public class DeviceControlActivity extends Activity {
                             Connection connection = DriverManager.getConnection(url, user, password);
                             /* INSERT TO TABELI ALKOHOL*/
                             PreparedStatement statement = connection.prepareStatement("INSERT INTO test_drinking (user,timestamp,alcohol) VALUES (?, ?, ?)");
-                            statement.setString(1, "2");
+                            statement.setString(1, user_id);
                             statement.setString(2, String.valueOf(timestamp));
                             statement.setString(3, dana_alko);
                             statement.execute();
