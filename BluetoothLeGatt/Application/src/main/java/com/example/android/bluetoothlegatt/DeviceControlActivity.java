@@ -123,7 +123,7 @@ public class DeviceControlActivity extends Activity {
                 final String dana_puls = intent.getStringExtra(BluetoothLeService.EXTRA_DATA);
                 final String dana_alko = intent.getStringExtra(BluetoothLeService.EXTRA_ALKO);
                 final Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-                final String user_id = "15";
+//                final Date date = new Date();
 
                 new Thread(new Runnable() {
                     @Override
@@ -141,11 +141,11 @@ public class DeviceControlActivity extends Activity {
                             String password = "Alkomat211.";
                             Connection connection = DriverManager.getConnection(url, user, password);
                             /* INSERT TO TABELI KROKÓW*/
-                            PreparedStatement statement = connection.prepareStatement("INSERT INTO test_activity (user,timestamp,steps,pulse) VALUES (?, ?, ?, ?)");
-                            statement.setString(1, user_id);
+                            PreparedStatement statement = connection.prepareStatement("INSERT INTO blog_activity (user,timestamp,steps,pulse) VALUES (?, ?, ?, ?)");
+                            statement.setString(1, "15");
                             statement.setString(2, String.valueOf(timestamp));
                             statement.setString(3, dana_kroki);
-                            statement.setString(4, dana_puls);
+                            statement.setString(4, "1");
                             statement.execute();
                             statement.close();
                             connection.close();
@@ -166,12 +166,12 @@ public class DeviceControlActivity extends Activity {
                             String password = "Alkomat211.";
                             Connection connection = DriverManager.getConnection(url, user, password);
                             /* INSERT TO TABELI ALKOHOL*/
-                            PreparedStatement statement = connection.prepareStatement("INSERT INTO test_drinking (user,timestamp,alcohol) VALUES (?, ?, ?)");
-                            statement.setString(1, user_id);
-                            statement.setString(2, String.valueOf(timestamp));
-                            statement.setString(3, dana_alko);
-                            statement.execute();
-                            statement.close();
+                            PreparedStatement statement2 = connection.prepareStatement("INSERT INTO blog_drinking (user,timestamp,alcohol) VALUES (?, ?, ?)");
+                            statement2.setString(1, "15");
+                            statement2.setString(2, String.valueOf(timestamp));
+                            statement2.setString(3, dana_alko);
+                            statement2.execute();
+                            statement2.close();
                             connection.close();
 
                         } catch (ClassNotFoundException e) {

@@ -156,7 +156,8 @@ public class BluetoothLeService extends Service {
         }
         else if(UUID_ALCOHOL_MEASUREMENT.equals(characteristic.getUuid())){
             final int data = characteristic.getIntValue(BluetoothGattCharacteristic.FORMAT_UINT32,0);
-            intent.putExtra(EXTRA_ALKO, String.valueOf(data));
+            final float data1 = ((float)data)/100;
+            intent.putExtra(EXTRA_ALKO, String.valueOf(data1));
         }
         else {
             // For all other profiles, writes the data formatted in HEX.
